@@ -52,7 +52,7 @@ class ProfileSerializer(serializers.Serializer):
     def create(self, validated_data):
         return UserProfile.objects.create(**validated_data)
 
-class UserProfileWriteSerializer(serializer.Serializer):
+class UserProfileWriteSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=255)
     bio = serializers.CharField(max_length=1000)
 
