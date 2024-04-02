@@ -27,6 +27,8 @@ DEBUG = os.getenv("DJANGO_DEBUG", "True") == "True"
 
 TEST = os.getenv("ENABLE_TEST", "False") == "True"
 
+AUTH_USER_MODEL = 'core.User'
+
 if TEST:
     #  Setup a test database
     #  Use a custom django test runner
