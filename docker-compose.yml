@@ -1,0 +1,37 @@
+version: "3.9"
+
+volumes:
+  db_data: {}
+
+services:
+  web:
+    container_name: proximity_web_ui
+    build: docker/web.Dockerfile
+    command: python manage.py runserver
+  backend:
+    container_name: proximity_web_backend
+    build: docker/backend.Dockerfile
+    command: python manage.py runserver
+  db:
+    container_name: proximity_search_db
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_DB: spatial_db
+      POSTGRES_USER: sudo_user
+      POSTGRES_PASSWORD: IamSudo
+    ports:
+      - "5432:5432"
+    restart: always
+  search:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+  cache:
+    container_name: redis
+    image: redis:6.0.9-alpine
+    ports:
+      - "6379:6379"
