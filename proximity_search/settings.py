@@ -86,6 +86,19 @@ DATABASES = {
     }
 }
 
+CACHE_TTL = 60 * 15
+
+CACHE = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.rediscache.RedisCache",
+        "LOCATION": "redis://",
+        "TIMEOUT": CACHE_TTL,
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
