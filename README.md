@@ -1,3 +1,12 @@
+Tech Stack:
+
+- React
+- Python
+- ElasticSearch
+- Redis
+- Docker
+- Postgres[PostGIS]
+
 Technical Challenge Overview:
 
 Your task is to initiate the development of a Facebook Group Search Tool.
