@@ -26,7 +26,7 @@ class Town(models.Model):
         return f'{self.name}'
 
 
-class Groups(models.Model):
+class Group(models.Model):
     """
     Represents a facebook group or community
     """
