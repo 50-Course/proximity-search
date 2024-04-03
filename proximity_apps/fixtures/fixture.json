@@ -1,0 +1,961 @@
+[
+  {
+    "name": "Franklin Community",
+    "location": "Franklin, Massachusetts",
+    "members": 1200,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Smithtown Residents",
+    "location": "Smithtown, New York",
+    "members": 800,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Education Enthusiasts",
+    "location": "Springfield, Illinois",
+    "members": 1500,
+    "is_private": false,
+    "category": "Educational"
+  },
+  {
+    "name": "Buy/Sell Springfield",
+    "location": "Springfield, Illinois",
+    "members": 1100,
+    "is_private": true,
+    "category": "Buy/Sell"
+  },
+  {
+    "name": "Near Community 1",
+    "location": "City A",
+    "members": 1200,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Near Community 2",
+    "location": "City B",
+    "members": 800,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Near Education Enthusiasts",
+    "location": "City C",
+    "members": 1500,
+    "is_private": false,
+    "category": "Educational"
+  },
+  {
+    "name": "Near Buy/Sell Community",
+    "location": "City D",
+    "members": 1100,
+    "is_private": true,
+    "category": "Buy/Sell"
+  },
+  {
+    "name": "Far-out Community 1",
+    "location": "Remote Town X",
+    "members": 200,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Far-out Community 2",
+    "location": "Isolated Village Y",
+    "members": 400,
+    "is_private": false,
+    "category": "Community"
+  },
+  {
+    "name": "Far-out Education Enthusiasts",
+    "location": "Rural Area Z",
+    "members": 300,
+    "is_private": true,
+    "category": "Educational"
+  },
+  {
+    "name": "Far-out Buy/Sell Community",
+    "location": "Remote Settlement W",
+    "members": 500,
+    "is_private": true,
+    "category": "Buy/Sell"
+  },
+  {
+    "name": "Boston Community Hub",
+    "location": "Boston, MA",
+    "members": 1200,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Cambridge Education Network",
+    "location": "Cambridge, MA",
+    "members": 800,
+    "is_private": true,
+    "category": "Educational"
+  },
+  {
+    "name": "Brooklyn Buy/Sell Market",
+    "location": "Brooklyn, NY",
+    "members": 1500,
+    "is_private": false,
+    "category": "Buy/Sell"
+  },
+  {
+    "name": "Philadelphia Community Exchange",
+    "location": "Philadelphia, PA",
+    "members": 1100,
+    "is_private": true,
+    "category": "Community"
+  },
+  {
+    "name": "Washington DC Professionals",
+    "location": "Washington, DC",
+    "members": 900,
+    "is_private": false,
+    "category": "Professional"
+  },
+  {
+    "name": "Chicago Tech Enthusiasts",
+    "location": "Chicago, IL",
+    "members": 1400,
+    "is_private": true,
+    "category": "Technology"
+  },
+  {
+    "name": "Austin Art Community",
+    "location": "Austin, TX",
+    "members": 950,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "San Francisco Foodies",
+    "location": "San Francisco, CA",
+    "members": 1050,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Seattle Music Lovers",
+    "location": "Seattle, WA",
+    "members": 1300,
+    "is_private": false,
+    "category": "Music"
+  },
+  {
+    "name": "Los Angeles Movie Fans",
+    "location": "Los Angeles, CA",
+    "members": 850,
+    "is_private": true,
+    "category": "Entertainment"
+  },
+  {
+    "name": "Denver Fitness Group",
+    "location": "Denver, CO",
+    "members": 1000,
+    "is_private": false,
+    "category": "Fitness"
+  },
+  {
+    "name": "Portland Book Club",
+    "location": "Portland, OR",
+    "members": 1150,
+    "is_private": true,
+    "category": "Literature"
+  },
+  {
+    "name": "Miami Outdoor Adventures",
+    "location": "Miami, FL",
+    "members": 750,
+    "is_private": false,
+    "category": "Adventure"
+  },
+  {
+    "name": "New Orleans Culinary Society",
+    "location": "New Orleans, LA",
+    "members": 800,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Nashville Music Scene",
+    "location": "Nashville, TN",
+    "members": 1100,
+    "is_private": false,
+    "category": "Music"
+  },
+  {
+    "name": "Detroit Car Enthusiasts",
+    "location": "Detroit, MI",
+    "members": 900,
+    "is_private": true,
+    "category": "Automotive"
+  },
+  {
+    "name": "Salt Lake City Tech Innovators",
+    "location": "Salt Lake City, UT",
+    "members": 950,
+    "is_private": false,
+    "category": "Technology"
+  },
+  {
+    "name": "Phoenix Health and Wellness",
+    "location": "Phoenix, AZ",
+    "members": 1050,
+    "is_private": true,
+    "category": "Health"
+  },
+  {
+    "name": "Las Vegas Poker Club",
+    "location": "Las Vegas, NV",
+    "members": 800,
+    "is_private": false,
+    "category": "Gaming"
+  },
+  {
+    "name": "Albuquerque Art Collective",
+    "location": "Albuquerque, NM",
+    "members": 850,
+    "is_private": true,
+    "category": "Art"
+  },
+  {
+    "name": "San Diego Surfing Community",
+    "location": "San Diego, CA",
+    "members": 950,
+    "is_private": false,
+    "category": "Sports"
+  },
+  {
+    "name": "Anchorage Wilderness Explorers",
+    "location": "Anchorage, AK",
+    "members": 700,
+    "is_private": true,
+    "category": "Adventure"
+  },
+  {
+    "name": "Honolulu Yoga Retreat",
+    "location": "Honolulu, HI",
+    "members": 850,
+    "is_private": false,
+    "category": "Fitness"
+  },
+  {
+    "name": "Portland Coffee Enthusiasts",
+    "location": "Portland, OR",
+    "members": 950,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Santa Fe Artisans Guild",
+    "location": "Santa Fe, NM",
+    "members": 900,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Billings Outdoor Photography",
+    "location": "Billings, MT",
+    "members": 750,
+    "is_private": true,
+    "category": "Photography"
+  },
+  {
+    "name": "Jacksonville Fitness Fanatics",
+    "location": "Jacksonville, FL",
+    "members": 1000,
+    "is_private": false,
+    "category": "Fitness"
+  },
+  {
+    "name": "Memphis Blues Society",
+    "location": "Memphis, TN",
+    "members": 800,
+    "is_private": true,
+    "category": "Music"
+  },
+  {
+    "name": "Boise Tech Meetup",
+    "location": "Boise, ID",
+    "members": 900,
+    "is_private": false,
+    "category": "Technology"
+  },
+  {
+    "name": "Fargo Gaming Group",
+    "location": "Fargo, ND",
+    "members": 700,
+    "is_private": true,
+    "category": "Gaming"
+  },
+  {
+    "name": "Des Moines Foodies",
+    "location": "Des Moines, IA",
+    "members": 850,
+    "is_private": false,
+    "category": "Food"
+  },
+  {
+    "name": "Omaha Poker League",
+    "location": "Omaha, NE",
+    "members": 800,
+    "is_private": true,
+    "category": "Gaming"
+  },
+  {
+    "name": "Little Rock Outdoor Explorers",
+    "location": "Little Rock, AR",
+    "members": 750,
+    "is_private": false,
+    "category": "Adventure"
+  },
+  {
+    "name": "Montgomery Book Club",
+    "location": "Montgomery, AL",
+    "members": 700,
+    "is_private": true,
+    "category": "Literature"
+  },
+  {
+    "name": "Juneau Wildlife Photographers",
+    "location": "Juneau, AK",
+    "members": 750,
+    "is_private": false,
+    "category": "Photography"
+  },
+  {
+    "name": "Hartford Writing Workshop",
+    "location": "Hartford, CT",
+    "members": 800,
+    "is_private": true,
+    "category": "Literature"
+  },
+  {
+    "name": "Wilmington Wine Tasting Society",
+    "location": "Wilmington, DE",
+    "members": 700,
+    "is_private": false,
+    "category": "Food"
+  },
+  {
+    "name": "Honolulu Outdoor Yoga Retreat",
+    "location": "Honolulu, HI",
+    "members": 800,
+    "is_private": true,
+    "category": "Fitness"
+  },
+  {
+    "name": "Boise Technology Innovators",
+    "location": "Boise, ID",
+    "members": 850,
+    "is_private": false,
+    "category": "Technology"
+  },
+  {
+    "name": "Bismarck Music Club",
+    "location": "Bismarck, ND",
+    "members": 700,
+    "is_private": true,
+    "category": "Music"
+  },
+  {
+    "name": "Montpelier Artisan Collective",
+    "location": "Montpelier, VT",
+    "members": 750,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Concord Hiking Group",
+    "location": "Concord, NH",
+    "members": 700,
+    "is_private": true,
+    "category": "Adventure"
+  },
+  {
+    "name": "Cheyenne Poetry Society",
+    "location": "Cheyenne, WY",
+    "members": 750,
+    "is_private": false,
+    "category": "Literature"
+  },
+  {
+    "name": "Charleston Culinary Circle",
+    "location": "Charleston, WV",
+    "members": 700,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Providence Music Enthusiasts",
+    "location": "Providence, RI",
+    "members": 800,
+    "is_private": false,
+    "category": "Music"
+  },
+  {
+    "name": "Frankfort Gaming Association",
+    "location": "Frankfort, KY",
+    "members": 700,
+    "is_private": true,
+    "category": "Gaming"
+  },
+  {
+    "name": "Tallahassee Tech Meetup",
+    "location": "Tallahassee, FL",
+    "members": 750,
+    "is_private": false,
+    "category": "Technology"
+  },
+  {
+    "name": "Lansing Book Club",
+    "location": "Lansing, MI",
+    "members": 700,
+    "is_private": true,
+    "category": "Literature"
+  },
+  {
+    "name": "New York Aviation Enthusiasts",
+    "location": "New York, NY",
+    "members": 1200,
+    "is_private": true,
+    "category": "Aviation"
+  },
+  {
+    "name": "Los Angeles Engineering Society",
+    "location": "Los Angeles, CA",
+    "members": 800,
+    "is_private": true,
+    "category": "Engineering"
+  },
+  {
+    "name": "San Francisco Tech Innovators",
+    "location": "San Francisco, CA",
+    "members": 1500,
+    "is_private": false,
+    "category": "Technology"
+  },
+  {
+    "name": "Seattle Hiking Group",
+    "location": "Seattle, WA",
+    "members": 1100,
+    "is_private": true,
+    "category": "Hiking"
+  },
+  {
+    "name": "Chicago Bikers Club",
+    "location": "Chicago, IL",
+    "members": 900,
+    "is_private": false,
+    "category": "Biking"
+  },
+  {
+    "name": "Boston Coding Bootcamp",
+    "location": "Boston, MA",
+    "members": 1400,
+    "is_private": true,
+    "category": "Technology"
+  },
+  {
+    "name": "Denver Outdoor Adventures",
+    "location": "Denver, CO",
+    "members": 950,
+    "is_private": false,
+    "category": "Adventure"
+  },
+  {
+    "name": "Austin Startup Network",
+    "location": "Austin, TX",
+    "members": 1050,
+    "is_private": true,
+    "category": "Entrepreneurship"
+  },
+  {
+    "name": "Portland Photography Club",
+    "location": "Portland, OR",
+    "members": 1300,
+    "is_private": false,
+    "category": "Photography"
+  },
+  {
+    "name": "Miami Scuba Diving Society",
+    "location": "Miami, FL",
+    "members": 850,
+    "is_private": true,
+    "category": "Scuba Diving"
+  },
+  {
+    "name": "San Diego Surfing Community",
+    "location": "San Diego, CA",
+    "members": 1000,
+    "is_private": false,
+    "category": "Surfing"
+  },
+  {
+    "name": "Nashville Music Production Studio",
+    "location": "Nashville, TN",
+    "members": 1150,
+    "is_private": true,
+    "category": "Music"
+  },
+  {
+    "name": "Detroit Auto Racing Club",
+    "location": "Detroit, MI",
+    "members": 750,
+    "is_private": false,
+    "category": "Auto Racing"
+  },
+  {
+    "name": "Salt Lake City Skiing Association",
+    "location": "Salt Lake City, UT",
+    "members": 800,
+    "is_private": true,
+    "category": "Skiing"
+  },
+  {
+    "name": "Phoenix Astronomical Society",
+    "location": "Phoenix, AZ",
+    "members": 1100,
+    "is_private": false,
+    "category": "Astronomy"
+  },
+  {
+    "name": "Las Vegas Poker League",
+    "location": "Las Vegas, NV",
+    "members": 900,
+    "is_private": true,
+    "category": "Poker"
+  },
+  {
+    "name": "Albuquerque Rock Climbing Club",
+    "location": "Albuquerque, NM",
+    "members": 950,
+    "is_private": false,
+    "category": "Rock Climbing"
+  },
+  {
+    "name": "San Jose Robotics Workshop",
+    "location": "San Jose, CA",
+    "members": 1050,
+    "is_private": true,
+    "category": "Robotics"
+  },
+  {
+    "name": "Anchorage Wildlife Photography",
+    "location": "Anchorage, AK",
+    "members": 800,
+    "is_private": false,
+    "category": "Photography"
+  },
+  {
+    "name": "Honolulu Surfing School",
+    "location": "Honolulu, HI",
+    "members": 950,
+    "is_private": true,
+    "category": "Surfing"
+  },
+  {
+    "name": "Boise Outdoor Survival Group",
+    "location": "Boise, ID",
+    "members": 850,
+    "is_private": false,
+    "category": "Survival"
+  },
+  {
+    "name": "Fargo Extreme Sports Club",
+    "location": "Fargo, ND",
+    "members": 700,
+    "is_private": true,
+    "category": "Extreme Sports"
+  },
+  {
+    "name": "Des Moines Art Appreciation Society",
+    "location": "Des Moines, IA",
+    "members": 800,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Omaha Birdwatching Association",
+    "location": "Omaha, NE",
+    "members": 750,
+    "is_private": true,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Little Rock Meditation Circle",
+    "location": "Little Rock, AR",
+    "members": 700,
+    "is_private": false,
+    "category": "Meditation"
+  },
+  {
+    "name": "Montgomery Dog Training Group",
+    "location": "Montgomery, AL",
+    "members": 750,
+    "is_private": true,
+    "category": "Dog Training"
+  },
+  {
+    "name": "Juneau Outdoor Adventures",
+    "location": "Juneau, AK",
+    "members": 700,
+    "is_private": false,
+    "category": "Adventure"
+  },
+  {
+    "name": "Hartford Chess Club",
+    "location": "Hartford, CT",
+    "members": 750,
+    "is_private": true,
+    "category": "Chess"
+  },
+  {
+    "name": "Wilmington Fishing Society",
+    "location": "Wilmington, DE",
+    "members": 700,
+    "is_private": false,
+    "category": "Fishing"
+  },
+  {
+    "name": "Honolulu Fitness Bootcamp",
+    "location": "Honolulu, HI",
+    "members": 750,
+    "is_private": true,
+    "category": "Fitness"
+  },
+  {
+    "name": "Boise Robotics Club",
+    "location": "Boise, ID",
+    "members": 700,
+    "is_private": false,
+    "category": "Robotics"
+  },
+  {
+    "name": "Bismarck Photography Society",
+    "location": "Bismarck, ND",
+    "members": 750,
+    "is_private": true,
+    "category": "Photography"
+  },
+  {
+    "name": "Montpelier Artisan Workshop",
+    "location": "Montpelier, VT",
+    "members": 700,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Concord Birdwatching Society",
+    "location": "Concord, NH",
+    "members": 750,
+    "is_private": true,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Cheyenne Yoga Community",
+    "location": "Cheyenne, WY",
+    "members": 700,
+    "is_private": false,
+    "category": "Yoga"
+  },
+  {
+    "name": "Charleston Foodies Club",
+    "location": "Charleston, WV",
+    "members": 750,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Providence Art Collective",
+    "location": "Providence, RI",
+    "members": 700,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Frankfort Fitness Bootcamp",
+    "location": "Frankfort, KY",
+    "members": 750,
+    "is_private": true,
+    "category": "Fitness"
+  },
+  {
+    "name": "Tallahassee Robotics Workshop",
+    "location": "Tallahassee, FL",
+    "members": 700,
+    "is_private": false,
+    "category": "Robotics"
+  },
+  {
+    "name": "Lansing Meditation Circle",
+    "location": "Lansing, MI",
+    "members": 750,
+    "is_private": true,
+    "category": "Meditation"
+  },
+  {
+    "name": "Charlotte Music Club",
+    "location": "Charlotte, NC",
+    "members": 700,
+    "is_private": false,
+    "category": "Music"
+  },
+  {
+    "name": "Anchorage Fishing Society",
+    "location": "Anchorage, AK",
+    "members": 750,
+    "is_private": true,
+    "category": "Fishing"
+  },
+  {
+    "name": "Honolulu Extreme Sports Club",
+    "location": "Honolulu, HI",
+    "members": 700,
+    "is_private": false,
+    "category": "Extreme Sports"
+  },
+  {
+    "name": "Boise Art Appreciation Society",
+    "location": "Boise, ID",
+    "members": 750,
+    "is_private": true,
+    "category": "Art"
+  },
+  {
+    "name": "Fargo Birdwatching Association",
+    "location": "Fargo, ND",
+    "members": 700,
+    "is_private": false,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Des Moines Dog Training Group",
+    "location": "Des Moines, IA",
+    "members": 750,
+    "is_private": true,
+    "category": "Dog Training"
+  },
+  {
+    "name": "Omaha Outdoor Adventures",
+    "location": "Omaha, NE",
+    "members": 700,
+    "is_private": false,
+    "category": "Adventure"
+  },
+  {
+    "name": "Little Rock Chess Club",
+    "location": "Little Rock, AR",
+    "members": 750,
+    "is_private": true,
+    "category": "Chess"
+  },
+  {
+    "name": "Montgomery Fishing Society",
+    "location": "Montgomery, AL",
+    "members": 700,
+    "is_private": false,
+    "category": "Fishing"
+  },
+  {
+    "name": "Juneau Yoga Community",
+    "location": "Juneau, AK",
+    "members": 750,
+    "is_private": true,
+    "category": "Yoga"
+  },
+  {
+    "name": "Hartford Foodies Club",
+    "location": "Hartford, CT",
+    "members": 700,
+    "is_private": false,
+    "category": "Food"
+  },
+  {
+    "name": "Wilmington Robotics Club",
+    "location": "Wilmington, DE",
+    "members": 750,
+    "is_private": true,
+    "category": "Robotics"
+  },
+  {
+    "name": "Honolulu Artisan Workshop",
+    "location": "Honolulu, HI",
+    "members": 700,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Boise Birdwatching Society",
+    "location": "Boise, ID",
+    "members": 750,
+    "is_private": true,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Bismarck Yoga Community",
+    "location": "Bismarck, ND",
+    "members": 700,
+    "is_private": false,
+    "category": "Yoga"
+  },
+  {
+    "name": "Montpelier Foodies Club",
+    "location": "Montpelier, VT",
+    "members": 750,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Concord Robotics Club",
+    "location": "Concord, NH",
+    "members": 700,
+    "is_private": false,
+    "category": "Robotics"
+  },
+  {
+    "name": "Cheyenne Artisan Workshop",
+    "location": "Cheyenne, WY",
+    "members": 750,
+    "is_private": true,
+    "category": "Art"
+  },
+  {
+    "name": "Charleston Birdwatching Society",
+    "location": "Charleston, WV",
+    "members": 700,
+    "is_private": false,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Providence Yoga Community",
+    "location": "Providence, RI",
+    "members": 750,
+    "is_private": true,
+    "category": "Yoga"
+  },
+  {
+    "name": "Frankfort Foodies Club",
+    "location": "Frankfort, KY",
+    "members": 700,
+    "is_private": false,
+    "category": "Food"
+  },
+  {
+    "name": "Tallahassee Robotics Club",
+    "location": "Tallahassee, FL",
+    "members": 750,
+    "is_private": true,
+    "category": "Robotics"
+  },
+  {
+    "name": "Lansing Artisan Workshop",
+    "location": "Lansing, MI",
+    "members": 700,
+    "is_private": false,
+    "category": "Art"
+  },
+  {
+    "name": "Charlotte Birdwatching Society",
+    "location": "Charlotte, NC",
+    "members": 750,
+    "is_private": true,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Anchorage Yoga Community",
+    "location": "Anchorage, AK",
+    "members": 700,
+    "is_private": false,
+    "category": "Yoga"
+  },
+  {
+    "name": "Honolulu Foodies Club",
+    "location": "Honolulu, HI",
+    "members": 750,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Boise Robotics Club",
+    "location": "Boise, ID",
+    "members": 700,
+    "is_private": false,
+    "category": "Robotics"
+  },
+  {
+    "name": "Bismarck Birdwatching Society",
+    "location": "Bismarck, ND",
+    "members": 750,
+    "is_private": true,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Montpelier Yoga Community",
+    "location": "Montpelier, VT",
+    "members": 700,
+    "is_private": false,
+    "category": "Yoga"
+  },
+  {
+    "name": "Concord Foodies Club",
+    "location": "Concord, NH",
+    "members": 750,
+    "is_private": true,
+    "category": "Food"
+  },
+  {
+    "name": "Cheyenne Robotics Club",
+    "location": "Cheyenne, WY",
+    "members": 700,
+    "is_private": false,
+    "category": "Robotics"
+  },
+  {
+    "name": "Charleston Artisan Workshop",
+    "location": "Charleston, WV",
+    "members": 750,
+    "is_private": true,
+    "category": "Art"
+  },
+  {
+    "name": "Providence Birdwatching Society",
+    "location": "Providence, RI",
+    "members": 700,
+    "is_private": false,
+    "category": "Birdwatching"
+  },
+  {
+    "name": "Frankfort Yoga Community",
+    "location": "Frankfort, KY",
+    "members": 750,
+    "is_private": true,
+    "category": "Yoga"
+  },
+  {
+    "name": "Tallahassee Foodies Club",
+    "location": "Tallahassee, FL",
+    "members": 700,
+    "is_private": false,
+    "category": "Food"
+  },
+  {
+    "name": "Lansing Robotics Club",
+    "location": "Lansing, MI",
+    "members": 750,
+    "is_private": true,
+    "category": "Robotics"
+  },
+  {
+    "name": "Charlotte Artisan Workshop",
+    "location": "Charlotte, NC",
+    "members": 700,
+    "is_private": false,
+    "category": "Art"
+  }
+]
