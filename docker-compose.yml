@@ -8,8 +8,9 @@ services:
   #   command: python manage.py runserver
   backend:
     container_name: proximity_web_backend
-    build: ./docker/dockerfiles/backend.dockerfile
-    command: python3 manage.py runserver
+    build:
+      context: docker/
+      dockerfile: dockerfiles/backend/Dockerfile
   db:
     container_name: proximity_search_db
     image: postgres:13-alpine
