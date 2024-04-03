@@ -1,37 +1,44 @@
-FROM python:3.10-slim-bullseye as build-stage
+FROM ubuntu:22.04 as base
+
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt-get update && apt-get install -y --no-install-recommends \
+    libpq-dev \
+    libgdal-dev \
+    postgis \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /backend
+RUN mkdir -p /backend
 
 ARG UID=1000
 ARG GUID=1000
-
-WORKDIR /backend
-
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PIP_NO_CACHE_DIR=off  \
-    POETRY_VIRTUALENVS_CREATE=false
+    PIP_NO_CACHE_DIR=off
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential gcc python3-dev \
-    postgresql-client libpq-dev \
-    postgresql-13-postgis-3 \
-    postgresql-13-postgis-3-scripts \
-    && rm -rf /var/lib/apt/lists/*
-RUN pip install --upgrade pip
-RUN pip install poetry
+FROM python:3.10-slim-buster as python-deps
 
-COPY . ./backend/
+WORKDIR /backend
+COPY --from=base /backend /backend
+
+RUN pip install --upgrade pip \
+    && pip install poetry
+
+COPY pyproject.toml poetry.lock ./
 
 RUN poetry install --no-interaction --no-ansi
-RUN ./entrypoints/setup-postgis.sh
 
-RUN poetry run python manage.py collectstatic --noinput
-
-
-# Run application as lightweight as possible
 FROM python:3.10-slim-bullseye
 
 WORKDIR /backend
-COPY --from=build-stage /backend /backend
 
-ENTRYPOINT ["poetry", "run", "python", "manage.py" , "runserver", "0.0.0.0:8000"]
+COPY --from=python-deps /backend /backend
+
+COPY . ./
+
+RUN pip install --no-cache-dir poetry
+
+RUN poetry run python manage.py collectstatic --noinput
+
+CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
 
