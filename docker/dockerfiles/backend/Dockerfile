@@ -4,6 +4,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     libgdal-dev \
+    gdal-bin \
     postgis \
     && rm -rf /var/lib/apt/lists/*
 
@@ -38,6 +39,7 @@ COPY . ./
 
 RUN pip install --no-cache-dir poetry
 RUN rm  -rf .venv && poetry install --no-interaction --no-ansi \
+    && pip wheel --no-cache-dir --use-pep517 "gdal (==3.8.4)" \
     && poetry run python manage.py collectstatic --noinput
 
 CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
