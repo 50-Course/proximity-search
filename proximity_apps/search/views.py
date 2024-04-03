@@ -8,7 +8,6 @@ except ImportError:
     from collections.abc import Mapping
 
 from django.contrib.gis.geos import Point
-from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.request import Request
@@ -18,7 +17,7 @@ from .models import Group, Town
 from .permissions import HasAPIKeyPermission
 
 
-@permission_classes([HasAPIKeyPermission])
+# @permission_classes([HasAPIKeyPermission])
 @api_view(['GET'])
 def search_within_radius(request: Request, city: str, **filters: Mapping) -> Response:
     """
