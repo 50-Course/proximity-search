@@ -1,17 +1,15 @@
-version: "3.9"
-
 volumes:
   db_data: {}
 
 services:
-  web:
-    container_name: proximity_web_ui
-    build: docker/web.Dockerfile
-    command: python manage.py runserver
+  # web:
+  #   container_name: proximity_web_ui
+  #   build: docker/web.Dockerfile
+  #   command: python manage.py runserver
   backend:
     container_name: proximity_web_backend
-    build: docker/backend.Dockerfile
-    command: python manage.py runserver
+    build: ./docker/dockerfiles/backend.dockerfile
+    command: python3 manage.py runserver
   db:
     container_name: proximity_search_db
     image: postgres:13-alpine
