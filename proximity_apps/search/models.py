@@ -31,8 +31,8 @@ class Group(models.Model):
     Represents a facebook group or community
     """
     id = models.CharField(max_length=100, primary_key=True)
-    name = models.CharField(max_length=100)
-    description = models.TextField()
+    name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(null=True, blank=True)
     location = gis_models.PointField()
     town = models.ForeignKey(Town, on_delete=models.CASCADE)
     is_private = models.BooleanField()
