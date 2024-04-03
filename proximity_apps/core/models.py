@@ -30,3 +30,9 @@ class UserProfile(models.Model):
     api_key = models.CharField(max_length=255, blank=True, null=True)
 
     objects = models.Manager()
+
+    def __str__(self):
+        return f'{user.full_name}'
+
+    def generate_api_key(self):
+        pass
