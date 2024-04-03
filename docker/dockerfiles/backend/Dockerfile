@@ -37,8 +37,8 @@ COPY --from=python-deps /backend /backend
 COPY . ./
 
 RUN pip install --no-cache-dir poetry
-
-RUN poetry run python manage.py collectstatic --noinput
+RUN rm  -rf .venv && poetry install --no-interaction --no-ansi \
+    && poetry run python manage.py collectstatic --noinput
 
 CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
 
