@@ -20,4 +20,5 @@ from django.urls import include, path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include(('proximity_apps.core.urls', 'proximity_apps.core'),namespace='core-api')),
+    path('api/search/', include(('proximity_apps.search.urls', 'proximity_apps.search'),namespace='search-api')),
 ] 
