@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
+    "rest_framework_api_key",
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
     "proximity_apps.core",
@@ -92,6 +93,14 @@ WSGI_APPLICATION = "proximity_search.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("POSTGIS_DB", "spatial_db_postgis"),
+        "USER": os.getenv("POSTGIS_USER", "Sudo"),
+        "PASSWORD": os.getenv("POSTGIS_PASSWORD", "password"),
+        "HOST": os.getenv("POSTGIS_HOST", "localhost"),
+        "PORT": os.getenv("POSTGIS_PORT", 5433),
+    },
+    "main": {
+        "ENGINE": "django.contrib.backends.postgresql",
         "NAME": os.getenv("POSTGRES_DB"),
         "USER": os.getenv("POSTGRES_USER"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
@@ -174,3 +183,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://localhost:8080",
 ]
+
+# GDAL_LIBRARY_PATH = os.getenv("GDAL_LIBRARY_PATH", "/usr/lib/libgdal.so")
+# GEOS_LIBRARY_PATH = os.getenv("GEOS_LIBRARY_PATH", "/usr/lib/libgeos_c.so")
