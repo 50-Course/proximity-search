@@ -1,6 +1,3 @@
-volumes:
-  db_data: {}
-
 services:
   # web:
   #   container_name: proximity_web_ui
@@ -11,6 +8,11 @@ services:
     build:
       context: .
       dockerfile: docker/dockerfiles/backend/Dockerfile
+    depends_on:
+      - db
+      - postgis
+      - search
+      - cache
   db:
     container_name: proximity_search_db
     image: postgres:13-alpine
@@ -31,17 +33,18 @@ services:
     container_name: proximity_search_postgis
     image: postgis/postgis:13-3.1-alpine
     environment:
-      POSTGRES_DB: spatial_db
+      POSTGRES_DB: spatial_db_postgis
       POSTGRES_USER: sudo_user
       POSTGRES_PASSWORD: IamSudo
+      POSTGRES_PORT: 5433
     ports:
-      - "5433:5432"
+      - 5433:5432
     restart: always
+    volumes:
+      - postgis_data:/var/lib/postgresql_postgis/data
     depends_on:
       - db
-    volumes:
-      - ./docker/entrypoints/postgis.sh:/postgis.sh
-    entrypoint: ["sh", "/postgis.sh"]
+    # command: sh -c "psql -U ${POSTGRES_USER} -d spatial_db_postgis -p 5433 -c 'CREATE EXTENSION postgis;' && psql -U ${POSTGRES_USER} -d spatial_db_postgis -p 5433 -c 'CREATE EXTENSION postgis_topology;'"
 
   search:
     container_name: elasticsearch
@@ -56,3 +59,7 @@ services:
     image: redis:6.0.9-alpine
     ports:
       - "6379:6379"
+
+volumes:
+  db_data: {}
+  postgis_data:
