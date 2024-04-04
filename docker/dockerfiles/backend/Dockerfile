@@ -27,19 +27,28 @@ RUN pip install --upgrade pip \
 
 COPY pyproject.toml poetry.lock ./
 
-RUN poetry install --no-interaction --no-ansi
+# RUN poetry install --no-interaction --no-ansi
 
+
+# Build GDAL Alpine-based image
+FROM ghcr.io/osgeo/gdal:alpine-normal-latest as gdal-build
+
+WORKDIR /backend
+COPY --from=python-deps /backend /backend
+
+
+# Build final image with GDAL packaged
+# NOTE: we have to install GDAL from source to avoid issues with the pre-built wheels
 FROM python:3.10-slim-bullseye
 
 WORKDIR /backend
 
-COPY --from=python-deps /backend /backend
+COPY --from=gdal-build /backend /backend
 
 COPY . ./
 
 RUN pip install --no-cache-dir poetry
 RUN rm  -rf .venv && poetry install --no-interaction --no-ansi \
-    && pip wheel --no-cache-dir --use-pep517 "gdal (==3.8.4)" \
     && poetry run python manage.py collectstatic --noinput
 
 CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
