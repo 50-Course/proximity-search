@@ -12,7 +12,6 @@ class TimeStampMixin(models.Model):
     class Meta:
         abstract = True
 
-
 ######## MODELS ########
 
 class Town(models.Model):
@@ -26,7 +25,7 @@ class Town(models.Model):
         return f'{self.name}'
 
 
-class Group(models.Model):
+class Group(TimeStampMixin, models.Model):
     """
     Represents a facebook group or community
     """
@@ -45,7 +44,6 @@ class Group(models.Model):
     class Meta:
         verbose_name_plural = 'Groups'
         ordering = ['-created_at']
-        filters = ['town']
 
     def __str__(self) -> str:
         return f'{self.name}'
