@@ -3,22 +3,24 @@
 
 set -e
 
-update_dependencies() {
-  apt-get update -y && apt-get install -y postgresql-13-postgis-3
-}
+# Set terminal colors
+COLOR_ERR='\033[0;31m'
+COLOR_OKAY='\033[0;32m'
+COLOR_NC='\033[0m'
 
 create_postgis_extension() {
-  createdb -U spatialdb 
-  psql -U spatialdb -c "CREATE EXTENSION postgis;"
-  psql -U spatialdb -c "CREATE EXTENSION postgis_topology;"
+    psql -h localhost -U postgres -p 5432 -d spatial_db_postgis -c "CREATE EXTENSION postgis;"
+    psql -h localhost -U postgres -p 5432 -d spatial_db_postgis -c "CREATE EXTENSION postgis_topology;"
 }
 
-echo "Updating dependencies..."
+#  Use colors to indicate the status of the script
+echo ${COLOR_OKAY}"Creating PostGIS extension in PostgreSQL database..."}${COLOR_NC}
 
-update_dependencies
-
-echo "Creating PostGIS extension in PostgreSQL database..."
+if [ -z "$PGPASSWORD" ]; then
+  echo ${COLOR_ERR}"Please set the PGPASSWORD environment variable."}${COLOR_NC}
+  exit 1
+fi
 
 create_postgis_extension
 
-echo "PostGIS extension created in PostgreSQL database."
+echo %{COLOR_OKAY}"PostGIS extension created in PostgreSQL database."}${COLOR_NC}

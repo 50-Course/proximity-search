@@ -9,42 +9,21 @@ services:
       context: .
       dockerfile: docker/dockerfiles/backend/Dockerfile
     depends_on:
-      - db
       - postgis
       - search
       - cache
-  db:
-    container_name: proximity_search_db
-    image: postgres:13-alpine
-    environment:
-      POSTGRES_DB: spatial_db
-      POSTGRES_USER: sudo_user
-      POSTGRES_PASSWORD: IamSudo
-    ports:
-      - "5432:5432"
-    restart: always
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    command: ["postgres", "-c", "max_connections=300"]
-
-  # Additional layer for PostGIS
-  # Service only runs after the db service is up and running
   postgis:
     container_name: proximity_search_postgis
     image: postgis/postgis:13-3.1-alpine
     environment:
-      POSTGRES_DB: spatial_db_postgis
-      POSTGRES_USER: sudo_user
-      POSTGRES_PASSWORD: IamSudo
-      POSTGRES_PORT: 5433
+      POSTGIS_DB: spatial_db_postgis
+      POSTGIS_USER: postgres
     ports:
-      - 5433:5432
+      - 5432:5432
     restart: always
     volumes:
       - postgis_data:/var/lib/postgresql_postgis/data
-    depends_on:
-      - db
-    # command: sh -c "psql -U ${POSTGRES_USER} -d spatial_db_postgis -p 5433 -c 'CREATE EXTENSION postgis;' && psql -U ${POSTGRES_USER} -d spatial_db_postgis -p 5433 -c 'CREATE EXTENSION postgis_topology;'"
+    command: sh -c "psql -U ${POSTGRES_USER} -d spatial_db_postgis -c 'CREATE EXTENSION postgis;' && psql -U ${POSTGRES_USER} -d spatial_db_postgis -c 'CREATE EXTENSION postgis_topology;'"
 
   search:
     container_name: elasticsearch
@@ -61,5 +40,4 @@ services:
       - "6379:6379"
 
 volumes:
-  db_data: {}
   postgis_data:

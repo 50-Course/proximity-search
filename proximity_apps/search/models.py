@@ -36,10 +36,7 @@ class Group(TimeStampMixin, models.Model):
     town = models.ForeignKey(Town, on_delete=models.CASCADE)
     is_private = models.BooleanField()
     member_count = models.IntegerField()
-    categories = models.JSONField() # Essentially, a group can belong to more than one categor
-                                    # Could be education and social for example
-                                    # Or technology and social
-                                    # Or just social
+    category = models.CharField(max_length=30) 
 
     class Meta:
         verbose_name_plural = 'Groups'

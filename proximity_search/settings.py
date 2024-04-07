@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.gis",
     "corsheaders",
     "rest_framework",
     "rest_framework_api_key",
@@ -90,23 +91,15 @@ WSGI_APPLICATION = "proximity_search.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
+DATABASES = { 
+    "default": { 
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
         "NAME": os.getenv("POSTGIS_DB", "spatial_db_postgis"),
-        "USER": os.getenv("POSTGIS_USER", "Sudo"),
-        "PASSWORD": os.getenv("POSTGIS_PASSWORD", "password"),
+        "USER": os.getenv("POSTGIS_USER", "postgres"),
+        "PASSWORD": os.getenv("POSTGIS_PASSWORD", "postgres"),
         "HOST": os.getenv("POSTGIS_HOST", "localhost"),
-        "PORT": os.getenv("POSTGIS_PORT", 5433),
+        "PORT": os.getenv("POSTGIS_PORT", 5432),
     },
-    "main": {
-        "ENGINE": "django.contrib.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB"),
-        "USER": os.getenv("POSTGRES_USER"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "HOST": os.getenv("POSTGRES_HOST"),
-        "PORT": os.getenv("POSTGRES_PORT", 5432),
-    }
 }
 
 CACHE_TTL = 60 * 15
