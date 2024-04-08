@@ -1,7 +1,6 @@
-Facebook Group Search Tool
+## Facebook Group Search Tool
 
-The core functionality of this tool will be to identify and list community or town Facebook groups that meet the following criteria.
-It should be able to take in town name and find all the other towns with an X mile radius. Then report back the following:
+This tool is designed to help users find Facebook groups that are located within a certain radius of a town. The tool will be able to take in a town name and find all the other towns within an X mile radius. Then it will report back the following:
 
 - Located within a X mile radius of X town.
   - For example all groups with in 20 miles radius of Franklin, Massachusetts.
@@ -10,11 +9,18 @@ It should be able to take in town name and find all the other towns with an X mi
 - The groups should be private.
 - excluding any business or buy/sell groups.
 
-Tech Stack:
+## Tech Stack:
 
 - React
-- Python
+- Maplibre GL JS
+- Python (Django)
 - ElasticSearch
 - Redis
 - Docker
 - Postgres[PostGIS]
+
+## Contributing
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
